@@ -21,11 +21,11 @@ from algorithms import *
 logger = logging.getLogger()
 logger.setLevel(logging.ERROR)
 
-comparison_folder = "../results_plots/appendix_1_rndsucb_sucb"
+comparison_folder = "../results_plots/paper_2_2_rndsucb_sucb"
 
 
 M = 2
-n_exps = 30
+n_exps = 2
 algo_to_plot = [
                 #"Lugosi-Mehrabian 1"
                 #"Lugosi-Mehrabian 2",

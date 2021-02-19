@@ -87,8 +87,9 @@ def compute_results_dict(env_config,
     for every_t in list_every_t:
         mean_std_dict[every_t] = {}
         for mu_exponential in list_mu_exponential:
-            mean_std_dict[every_t][mu_exponential] = [np.round(np.mean(results_dict[str(every_t)][str(mu_exponential)]),2),
-                                                      np.round(np.std(results_dict[str(every_t)][str(mu_exponential)]),2)]
+            print(results_dict)
+            mean_std_dict[every_t][mu_exponential] = [np.round(np.mean(results_dict[(every_t)][(mu_exponential)]),2),
+                                                      np.round(np.std(results_dict[(every_t)][(mu_exponential)]),2)]
     filename = f"mean_std_{algo}_T-{T}_K-{K}_multiple_lambda_mu_n_exps{n_exps}"
     json_path = os.path.join(save_folder, filename + ".json")
     with open(json_path,'w') as f:
@@ -101,7 +102,7 @@ def compute_results_dict(env_config,
 
 ## PARAMS
 save_folder = "../results_plots/paper_5_2_dynamic_leaving_20"
-K = 10
+K = 4
 T = 1000000
 
 list_every_t = [1000, 10000]
@@ -117,7 +118,7 @@ config['M'] = M
 config['mu'] = mu
 config['horizon'] = T
 
-n_exps = 20
+n_exps = 2
 
 results_dict_sucb = compute_results_dict(env_config=config,
                                         list_every_t=list_every_t,

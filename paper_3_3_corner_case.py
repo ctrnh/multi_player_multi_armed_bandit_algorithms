@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-comparison_folder = "../results_plots/paper_4_3_corner_case"
+comparison_folder = "../results_plots/paper_3_3_corner_case"
 
 M = 5
 n_exps = 50

@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-save_folder = "../results_plots/paper_4_2_cumregret_wrt_delta"
+save_folder = "../results_plots/paper_3_2_cumregret_wrt_delta"
 
 n_exps = 50
 algo_to_plot = [

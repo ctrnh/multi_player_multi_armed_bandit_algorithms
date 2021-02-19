@@ -34,9 +34,7 @@ class Simulation:
         self.list_algo = list_algo
         self.env = environment
 
-        self.hist_folder = os.path.join(
-        			"/home/cindy/Documents/stage 2020/SIMULATIONS/results",
-        			#"../results",
+        self.hist_folder = os.path.join("../results",
                                   f"M_{self.env.M}-K_{self.env.K}",
                                   f"mu_{','.join(str(np.round(self.env.mu,3)).split())}"
                                      )
